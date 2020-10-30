@@ -6,9 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.bootcamp01templateecommerce.security.JwtAuthenticationFilter;
-import br.com.bootcamp01templateecommerce.security.TokenManager;
-import br.com.bootcamp01templateecommerce.security.UsersService;
+import br.com.bootcamp01templateecommerce.security.service.JwtAuthenticationFilter;
+import br.com.bootcamp01templateecommerce.security.service.TokenManager;
+import br.com.bootcamp01templateecommerce.security.service.UsersService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +56,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/produtos/{id:[0-9]+}").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/v1/usuarios").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/v1/produtos").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/v1/produtos/{id:[0-9]+}/imagens").permitAll()
                 .antMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

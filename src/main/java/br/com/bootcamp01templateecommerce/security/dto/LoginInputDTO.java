@@ -1,4 +1,4 @@
-package br.com.bootcamp01templateecommerce.security;
+package br.com.bootcamp01templateecommerce.security.dto;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 

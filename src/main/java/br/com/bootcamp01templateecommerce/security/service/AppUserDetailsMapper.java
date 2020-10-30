@@ -1,11 +1,12 @@
-package br.com.bootcamp01templateecommerce.security;
+package br.com.bootcamp01templateecommerce.security.service;
 
 import br.com.bootcamp01templateecommerce.entity.Usuario;
+import br.com.bootcamp01templateecommerce.security.model.UsuarioLogado;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetails;
 
 @Configuration
-public class AppUserDetailsMapper implements UserDetailsMapper{
+public class AppUserDetailsMapper implements UserDetailsMapper {
 
 	@Override
 	public UserDetails map(Object shouldBeASystemUser) {

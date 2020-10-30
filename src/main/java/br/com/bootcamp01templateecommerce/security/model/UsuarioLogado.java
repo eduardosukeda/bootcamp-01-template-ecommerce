@@ -1,4 +1,4 @@
-package br.com.bootcamp01templateecommerce.security;
+package br.com.bootcamp01templateecommerce.security.model;
 
 import java.util.Collection;
 import java.util.List;

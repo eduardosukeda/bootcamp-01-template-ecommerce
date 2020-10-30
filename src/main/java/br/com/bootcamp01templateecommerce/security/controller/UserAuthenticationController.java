@@ -1,7 +1,7 @@
 package br.com.bootcamp01templateecommerce.security.controller;
 
-import br.com.bootcamp01templateecommerce.security.LoginInputDTO;
-import br.com.bootcamp01templateecommerce.security.TokenManager;
+import br.com.bootcamp01templateecommerce.security.dto.LoginInputDTO;
+import br.com.bootcamp01templateecommerce.security.service.TokenManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package br.com.bootcamp01templateecommerce.security;
+package br.com.bootcamp01templateecommerce.security.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 

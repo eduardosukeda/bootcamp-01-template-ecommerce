@@ -6,6 +6,8 @@ import javax.validation.constraints.NotBlank;
 import br.com.bootcamp01templateecommerce.entity.Usuario;
 import org.hibernate.validator.constraints.Length;
 
+import java.util.Optional;
+
 public class UsuarioDTO {
 
     @Email
@@ -22,6 +24,11 @@ public class UsuarioDTO {
     public UsuarioDTO(@Email @NotBlank String email, @NotBlank @Length(min = 6) String senha) {
         this.email = email;
         this.senha = senha;
+    }
+
+    public UsuarioDTO(Optional<Usuario> usuario) {
+        this.email = usuario.get().getEmail();
+        this.senha = usuario.get().getSenha();
     }
 
     public Usuario toUsuario() {
